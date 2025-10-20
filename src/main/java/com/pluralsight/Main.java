@@ -41,5 +41,23 @@ public class Main {
             System.out.println(r);
         }
 
+        //---------------------
+
+        ArrayList<Employee> employees = new ArrayList<>();
+
+        Employee emp1 = new Employee(1, "Matt", "IT", 10, 35);
+        Employee emp2 = new Employee(1, "Fred", "Exec", 10, 45);
+        Employee emp3 = new Employee(1, "Sarah", "HR", 10, 40);
+        Employee emp4 = new Employee(1, "Sam", "HR", 20, 41);
+
+        employees.add(emp1);
+        employees.add(emp2);
+        employees.add(emp3);
+        employees.add(emp4);
+
+        for(Employee e : employees){
+            System.out.println(e);
+        }
+
     }
 }
