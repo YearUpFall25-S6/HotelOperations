@@ -20,6 +20,7 @@ public class Main {
 
         for(Room r : rooms){
             System.out.println(r);
+
         }
 
     }

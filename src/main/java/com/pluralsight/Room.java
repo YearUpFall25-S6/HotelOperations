@@ -37,7 +37,8 @@ public class Room {
 //        else{
 //            return true;
 //        }
-        return !(isOccupied || isDirty);
+       // return !(isOccupied || isDirty);
+        return (!isOccupied && !isDirty);
 
     }
 
@@ -48,6 +49,9 @@ public class Room {
                 ", price=" + price +
                 ", isOccupied=" + isOccupied +
                 ", isDirty=" + isDirty +
-                '}';
+                ", isAvailable=" + isAvailable() +
+                "}";
     }
+
+
 }
