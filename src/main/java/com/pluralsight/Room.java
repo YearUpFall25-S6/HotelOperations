@@ -42,6 +42,23 @@ public class Room {
 
     }
 
+
+    public void checkIn(){
+        this.isDirty = true;
+        this.isOccupied = true;
+    }
+
+    public void checkout(){
+        this.isOccupied = false;
+    }
+
+    public void cleanRoom(){
+        if(!isOccupied ){
+            this.isDirty = false;
+        }
+    }
+
+
     @Override
     public String toString() {
         return "Room{" +

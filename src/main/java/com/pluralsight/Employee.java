@@ -49,6 +49,29 @@ public class Employee {
         return (hoursWorked > 40) ? hoursWorked - 40 : 0;
     }
 
+    private double punchInTime = 0;
+
+    public void punchIn(double time){
+        this.punchInTime = time;
+    }
+
+    public void punchOut(double time){
+        //double elapsedTime = time - this.punchInTime;
+        //this.hoursWorked += (float) elapsedTime;
+
+        this.hoursWorked += (float) (time - this.punchInTime);
+
+    }
+
+    public void punchTimeCard(double checkInTime, double checkOutTime){
+        this.hoursWorked += (float) (checkOutTime - checkInTime);
+    }
+
+    public void logHours(float hours){
+        this.hoursWorked += hours;
+    }
+
+
     @Override
     public String toString() {
         return "Employee{" +
