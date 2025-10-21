@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Main {
@@ -68,7 +69,7 @@ public class Main {
         ArrayList<Employee> employees = new ArrayList<>();
         System.out.println("before");
         Employee emp1 = new Employee(1, "Matt", "IT", 10, 0);
-        Employee emp2 = new Employee(1, "Fred", "Exec", 10, 45);
+        Employee emp2 = new Employee(1, "Fred", "Exec", 10, 0);
         Employee emp3 = new Employee(1, "Sarah", "HR", 10, 40);
         Employee emp4 = new Employee(1, "Sam", "HR", 20, 41);
 
@@ -94,10 +95,17 @@ public class Main {
 
         emp1.logHours(40);
 
+        emp2.punchIn(8);
+        emp2.punchOut();
+
         System.out.println("after");
 
         for(Employee e : employees){
             System.out.println(e);
         }
+
+
+        //----------
+
     }
 }
